@@ -14,6 +14,9 @@ PHP, MariaDB, Apache, Symfony, Doctrine DBAL/ORM, CORS, GIT, Postman
 
 ### /api/login_check [POST]
   - autentizace (public) pomocí **uživatelského jména** a **hesla**, která vrátí/nastaví **JWT token**
+  <br />
+  vstupní hodnoty:
+  
   ```json
   {
     "username":"<uživatelské jméno>",
@@ -24,6 +27,9 @@ PHP, MariaDB, Apache, Symfony, Doctrine DBAL/ORM, CORS, GIT, Postman
   
 ### /api/register [POST]
   - registrace (public) nového uživatele (**email, uživatelské jméno, heslo**)
+  <br />
+  vstupní hodnoty:
+  
   ```json
   {
     "email":"<emailová adresa>",
@@ -39,6 +45,9 @@ PHP, MariaDB, Apache, Symfony, Doctrine DBAL/ORM, CORS, GIT, Postman
   * /api/**all**  - výpis informací všech uživatelů
   * /api/all/**<třídění>** - třídění lze nastavit dle **id, emailu, uživatelského jména, role** - defaultní hodnota třídění: **id**
   * /api/all/<třídění>/**<řazení>** - řazení lze nastavit **asc** (vzestupně) nebo **desc** (sestupně) - defaultní hodnota řazení: **asc** (vzestupně)
+ <br />
+ výstupní hodnoty:
+ 
  ```json
  {
     "api_info": [
@@ -69,7 +78,9 @@ PHP, MariaDB, Apache, Symfony, Doctrine DBAL/ORM, CORS, GIT, Postman
   * /api/users/<číslo stránky>/**<počet položek na stránku>** - počet položek, které chcete na stránce zobrazit (pouze čísla) - defaultní hodnota: **10** položek
   * /api/users/<číslo stránky>/<počet položek na stránku>/**<třídění>** - třídění lze nastavit dle **id, emailu, uživatelského jména, role** - defaultní hodnota třídění: **id**
   * /api/users/<číslo stránky>/<počet položek na stránku>/<třídění>/**<řazení>** - řazení lze nastavit **asc** (vzestupně) nebo **desc** (sestupně) - defaultní hodnota řazení: **asc** (vzestupně)
-  
+ <br />
+ výstupní hodnoty:
+ 
  ```json
  {
     "api_info": [
